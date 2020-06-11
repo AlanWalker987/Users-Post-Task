@@ -1,0 +1,14 @@
+<h1 class="heading">Users-Post Details</h1>
+<div class="box">
+  <input type="text"
+         id="username"
+         name="username"
+         autocomplete="off"
+         placeholder="Enter the user name here..."
+         (keyup.enter)="getDataFromApi(userNameInput.value)"
+         #userNameInput />
+</div>
+
+<div *ngIf="usersData.length > 0">
+  <router-outlet></router-outlet>
+</div>
